@@ -2,6 +2,7 @@ package com.android.tripapp
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextWatcher
@@ -12,11 +13,16 @@ import java.util.*
 
 class Signin : AppCompatActivity() {
 
+    lateinit var dbMemberInfo: DBMemberInfo
+    lateinit var sqlitedb : SQLiteDatabase
+
     lateinit var edtEmail_Si : EditText
     lateinit var edtPassword_Si : EditText
     lateinit var edtRePassword_Si : EditText
     lateinit var tvSelectBirth_Si : TextView
     lateinit var btnCalendar_Si : Button
+    lateinit var edtNickName_Si : EditText
+    lateinit var btnSignin_Si : Button
     lateinit var btnBackToLogin_Si : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,11 +34,30 @@ class Signin : AppCompatActivity() {
         edtRePassword_Si = findViewById(R.id.edtRePassword_Si)
         tvSelectBirth_Si = findViewById(R.id.tvSelectBirth_Si)
         btnCalendar_Si = findViewById(R.id.btnCalendar_Si)
+        edtNickName_Si = findViewById(R.id.edtNickname_Si)
+        btnSignin_Si = findViewById(R.id.btnSignin_Si)
         btnBackToLogin_Si = findViewById(R.id.btnBackToLogin_Si)
+
+        dbMemberInfo = DBMemberInfo(this, "member_infoDB", null, 1)
 
         // 달력 버튼 클릭 이벤트
         btnCalendar_Si.setOnClickListener {
             showDatePicker()
+        }
+
+        // 회원가입 버튼 클릭 이벤트
+        btnSignin_Si.setOnClickListener {
+            var str_email : String = edtEmail_Si.text.toString()
+            var str_password : String = edtPassword_Si.text.toString()
+            var str_birth : String = tvSelectBirth_Si.text.toString()
+            var str_nickname : String = edtNickName_Si.text.toString()
+
+            sqlitedb = dbMemberInfo.writableDatabase
+            sqlitedb.execSQL("INSERT INTO member_info VALUES ('" +str_email+ "', '" +str_password+ "', " +str_birth+ ", '" +str_nickname+ "')")
+            sqlitedb.close()
+
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         // 로그인 화면으로 돌아가는 버튼 리스너
