@@ -11,6 +11,10 @@ android {
         viewBinding true
     }
 
+    viewBinding {
+        enabled true
+    }
+
     defaultConfig {
         applicationId "com.android.tripapp"
         minSdk 24

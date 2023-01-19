@@ -13,5 +13,7 @@
     <color name="g6F6F6F">#6F6F6F</color>
     <color name="g555555">#555555</color>
     <color name="g80000000">#80000000</color>
+    <color name ="black_bar">#000000</color>
+    <color name="gray_bar">#D5D5D5</color>
 
 </resources>
