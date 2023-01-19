@@ -7,10 +7,10 @@ import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import java.util.*
 
 class Signin : AppCompatActivity() {
@@ -79,6 +79,7 @@ class Signin : AppCompatActivity() {
 
                         var intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
+                        Toast.makeText(applicationContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                     })
                     dialog_confirm.setNegativeButton("다시 작성하기", DialogInterface.OnClickListener{ dialog, id ->
 
