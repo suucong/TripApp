@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="24dp">
@@ -14,12 +15,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="66dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
         android:text=" UX WRITING"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="24dp"
-        android:minWidth="0dp"
-        android:minHeight="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edittext_round"
         android:hint="이메일 주소"
@@ -70,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_round"
         android:enabled="false"
@@ -78,51 +79,20 @@
         android:textColor="@color/black"
         android:textSize="16dp"
         android:visibility="visible"
-        app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="170dp"
-        android:layout_height="1px"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/gD9D9D9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:text="또는"
-        android:textColor="@color/gD9D9D9"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
-    <View
-        android:layout_width="170dp"
-        android:layout_height="1px"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/gD9D9D9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="54dp"
         android:layout_weight="3"
         android:text="아직 회원이 아니신가요?"
+        android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -131,9 +101,11 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="3dp"
         android:src="@drawable/ic_baseline_r_arraw"
+        app:layout_constraintEnd_toStartOf="@+id/btnSignin"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
@@ -141,8 +113,8 @@
         android:id="@+id/btnSignin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="85dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="98dp"
         android:layout_weight="1"
         android:background="@color/empty"
         android:minWidth="0dp"
@@ -151,7 +123,6 @@
         android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -159,6 +130,7 @@
         android:id="@+id/btnSignin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="@color/empty"
