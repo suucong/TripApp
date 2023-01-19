@@ -40,6 +40,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".MainHomeActivity"></activity>
+        <activity android:name=".Signin"></activity>
     </application>
 
 </manifest>
