@@ -7,6 +7,10 @@ android {
     namespace 'com.android.tripapp'
     compileSdk 33
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.android.tripapp"
         minSdk 24
