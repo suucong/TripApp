@@ -10,9 +10,9 @@ lateinit var search_View : SearchView
 
 class MainHomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        search_View = findViewById<SearchView>(R.id.search_View)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
+        search_View = findViewById<SearchView>(R.id.search_View)
 
         // 검색기능
         search_View.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
