@@ -7,23 +7,22 @@
     tools:context=".Signin">
 
     <ScrollView
-        android:layout_width="393dp"
-        android:layout_height="630dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnBackToLogin_Si"
+        android:layout_width="408dp"
+        android:layout_height="678dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="630dp">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnCalendar_Si"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
+                android:layout_width="81dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:text="달력"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,11 +32,12 @@
             <EditText
                 android:id="@+id/edtEmail_Si"
                 android:layout_width="340dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/edittext_round"
-                android:hint="   *******@naver.com"
+                android:layout_height="40dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="34dp"
+                android:hint="*******@naver.com"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail_Si"
                 tools:ignore="MissingConstraints" />
@@ -46,9 +46,11 @@
                 android:id="@+id/edtNickname_Si"
                 android:layout_width="347dp"
                 android:layout_height="41dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="8dp"
-                android:hint="미구현"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="27dp"
+                android:hint="원하는 닉네임을 입력하세요"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNickname_Si" />
 
@@ -56,50 +58,57 @@
                 android:id="@+id/tvBirth_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="99dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="327dp"
                 android:text="생년월일"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvRePassword_Si" />
+                app:layout_constraintTop_toBottomOf="@+id/edtRePassword_Si" />
 
             <TextView
                 android:id="@+id/tvNickname_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="99dp"
-                android:text="성별"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBirth_Si" />
-
-            <TextView
-                android:id="@+id/tvNickname_Si2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="99dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="335dp"
                 android:text="닉네임"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNickname_Si" />
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectBirth_Si" />
 
             <TextView
                 android:id="@+id/tvEmail_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="309dp"
                 android:text="이메일 주소"
-                android:textColor="@color/black"
-                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvIntro2_Si" />
+
+            <Button
+                android:id="@+id/btnSignin_Si"
+                android:layout_width="358dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="22dp"
+                android:text="회원가입 하기"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNickname_Si"
+                tools:ignore="MissingConstraints" />
 
             <EditText
                 android:id="@+id/edtRePassword_Si"
                 android:layout_width="351dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="22dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="13dp"
                 android:layout_marginEnd="25dp"
                 android:hint="비밀번호를 다시 입력하세요"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -111,9 +120,11 @@
                 android:id="@+id/tvIntro2_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="229dp"
                 android:text="회원가입을 시작합니다."
-                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvIntro1_Si" />
 
@@ -121,12 +132,10 @@
                 android:id="@+id/tvIntro1_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="66dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="297dp"
                 android:text="안녕하세요!"
-                android:textColor="@color/black"
-                android:textSize="22dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -135,9 +144,9 @@
                 android:id="@+id/edtPassword_Si"
                 android:layout_width="350dp"
                 android:layout_height="51dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="22dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="26dp"
+                android:layout_marginEnd="27dp"
                 android:hint="비밀번호를 입력하세요"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -148,9 +157,11 @@
                 android:id="@+id/tvSelectBirth_Si"
                 android:layout_width="263dp"
                 android:layout_height="39dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="20dp"
                 android:hint="달력에서 생년월일을 선택하세요"
+                app:layout_constraintEnd_toStartOf="@+id/btnCalendar_Si"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvBirth_Si" />
 
@@ -158,56 +169,39 @@
                 android:id="@+id/tvPassword_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="99dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="324dp"
                 android:text="비밀번호"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvEmail_Si" />
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail_Si" />
 
             <TextView
                 android:id="@+id/tvRePassword_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="99dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="11dp"
                 android:layout_marginEnd="283dp"
                 android:text="비밀번호 재확인"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPassword_Si" />
+                app:layout_constraintTop_toBottomOf="@+id/edtPassword_Si" />
+
+            <Button
+                android:id="@+id/btnBackToLogin_Si"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="194dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="로그인 화면으로 돌아가기"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignin_Si" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btnBackToLogin_Si"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="198dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="로그인 화면으로 돌아가기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/edtNickname_Si2"
-        android:layout_width="347dp"
-        android:layout_height="41dp"
-        android:hint="미구현"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="648dp" />
-
-    <Button
-        android:id="@+id/btnSignin_Si"
-        android:layout_width="358dp"
-        android:layout_height="49dp"
-        android:text="회원가입 하기"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="704dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
