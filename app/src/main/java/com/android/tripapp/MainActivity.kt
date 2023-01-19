@@ -1,6 +1,7 @@
 package com.android.tripapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -45,7 +46,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
-
+        // 로그인 클릭시 메인 홈 화면 액티비티로 화면 전환
+        btnLogin.setOnClickListener {
+            var intent = Intent(this, MainHomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
