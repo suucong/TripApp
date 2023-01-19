@@ -46,10 +46,12 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-    btnLogin.setOnClickListener({
-        val intent = Intent(this, MainHomeActivity::class.java)
-        startActivity(intent)
-    })
+        // 로그인 버튼 누르면 MainActivity -> MainHomeActivity
+        btnLogin.setOnClickListener({
+            val intent = Intent(this, MainHomeActivity::class.java)
+            startActivity(intent)
+        })
+        // 회원가입 하기 버튼 누르면 MainActivity -> MainHomeActivity
         btnSignin.setOnClickListener({
             val intent = Intent(this, Signin::class.java)
             startActivity(intent)
