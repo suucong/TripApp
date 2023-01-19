@@ -1,7 +1,6 @@
 package com.android.tripapp
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         btnSignin = findViewById(R.id.btnSignin)
 
+    //    btnLogin.isEnabled = false
 
         edtPassword.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
@@ -46,15 +46,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        btnSignin.setOnClickListener {
-            var intent = Intent(this, Signin::class.java)
-            startActivity(intent)
-        }
-
-
-    }
-
-    fun processDatePickerResult(year: Int, month: Int, day: Int) {
 
     }
 }
