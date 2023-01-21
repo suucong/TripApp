@@ -2,9 +2,6 @@ package com.android.tripapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.android.tripapp.databinding.ActivityNaviBinding
@@ -92,15 +89,5 @@ class NaviActivity : AppCompatActivity() {
             }
         }
         fragTransaction.commitAllowingStateLoss();
-    }
-}
-
-class OneFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 }

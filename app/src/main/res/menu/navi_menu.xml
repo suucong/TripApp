@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:menu  = "@menu/navi_menu" >
     <item
         android:id="@+id/HomeFragment"
         android:title="홈"
@@ -16,7 +18,7 @@
         android:icon="@drawable/ic_baseline_wb_sunny_24"/>
 
     <item
-        android:id="@+id/MyPlanFragment"
+        android:id="@+id/TripLogFragment"
         android:title="나의 여행 기록"
         android:icon="@drawable/ic_baseline_menu_book_24"/>
 
