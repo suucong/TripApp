@@ -7,197 +7,264 @@
     android:orientation="vertical"
     tools:context=".MainHomeActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/search_View"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_View"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="16dp"
-        app:iconifiedByDefault="false"
-        app:queryHint="이번 겨울에는 제주도 여행"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/recommend"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:text="이런 테마는 어때요"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_View" />
-
-    <HorizontalScrollView
+    <ScrollView
+        android:id="@+id/ScrollView1"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="414dp"
-        android:layout_height="131dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recommend"
-        tools:ignore="SpeakableTextPresentCheck">
-
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                app:srcCompat="@drawable/ic_launcher_background"/>
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
-
-            <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="이런 지역은 어때요"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView2"
-        android:layout_width="414dp"
-        android:layout_height="131dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/imageButton_"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                android:layout_marginRight="16dp"
+                app:queryHint="이번 겨울에는 제주도 여행"
+                app:iconifiedByDefault="false">
+            </androidx.appcompat.widget.SearchView>
 
-            <ImageButton
-                android:id="@+id/imageButton_2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                android:layout_marginLeft="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="이런 테마는 어때요?"/>
+            
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView1"
+                android:layout_width="414dp"
+                android:layout_height="131dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imageButton_3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
 
-            <ImageButton
-                android:id="@+id/imageButton_4"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
 
-            <ImageButton
-                android:id="@+id/imageButton_5"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="8dp"
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:src="@color/gray_bar" />
+                android:layout_marginLeft="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="이런 테마는 어때요?"/>
+
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView2"
+                android:layout_width="414dp"
+                android:layout_height="131dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_6"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="금주 인기 여행 후기"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView3"
+                android:layout_width="414dp"
+                android:layout_height="180dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/imageButton_1_"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton_2_"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <Button
+                android:id="@+id/WatchReviewAll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/white"
+                android:text="전체보기 >"/>
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="가장 많이 찾아본 여행 후기"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView4"
+                android:layout_width="414dp"
+                android:layout_height="180dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/imageButton2_1"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+                    <ImageButton
+                        android:id="@+id/imageButton2_2"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@color/gray_bar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <Button
+                android:id="@+id/WatchReviewAll2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/white"
+                android:text="전체보기 >"/>
         </LinearLayout>
-    </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="금주 인기 여행 후기"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
