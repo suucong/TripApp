@@ -12,6 +12,7 @@
         android:title="여행 계획"
         android:icon="@drawable/ic_baseline_calendar_today_24"/>
 
+
     <item
         android:id="@+id/WeatherFragment"
         android:title="날씨"

@@ -4,54 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
     <ScrollView
         android:id="@+id/ScrollView1"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-332dp">
+
         <LinearLayout
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                app:srcCompat="@drawable/ic_launcher_background"/>
+                app:srcCompat="@drawable/ic_launcher_background" />
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
-                app:queryHint="이번 겨울에는 제주도 여행"
-                app:iconifiedByDefault="false">
-            </androidx.appcompat.widget.SearchView>
+                android:background="@drawable/edittext_round"
+                app:iconifiedByDefault="false"
+                app:queryHint="이번 겨울에는 제주도 여행"></androidx.appcompat.widget.SearchView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="이런 테마는 어때요?"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="이런 테마는 어때요?"/>
-            
+                android:textStyle="bold" />
+
             <HorizontalScrollView
                 android:id="@+id/HorizontalScrollView1"
                 android:layout_width="414dp"
                 android:layout_height="131dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -105,24 +109,26 @@
                         android:layout_marginTop="16dp"
                         android:src="@color/gray_bar" />
                 </LinearLayout>
+
             </HorizontalScrollView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="이런 테마는 어때요?"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="이런 테마는 어때요?"/>
+                android:textStyle="bold" />
 
             <HorizontalScrollView
                 android:id="@+id/HorizontalScrollView2"
                 android:layout_width="414dp"
                 android:layout_height="131dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -177,25 +183,29 @@
                         android:src="@color/gray_bar" />
                 </LinearLayout>
             </HorizontalScrollView>
+
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
                 android:text="금주 인기 여행 후기"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <HorizontalScrollView
                 android:id="@+id/HorizontalScrollView3"
                 android:layout_width="414dp"
                 android:layout_height="180dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <ImageButton
                         android:id="@+id/imageButton_1_"
                         android:layout_width="300dp"
@@ -213,6 +223,7 @@
                         android:src="@color/gray_bar" />
                 </LinearLayout>
             </HorizontalScrollView>
+
             <Button
                 android:id="@+id/WatchReviewAll"
                 android:layout_width="match_parent"
@@ -220,26 +231,30 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:backgroundTint="@color/white"
-                android:text="전체보기 >"/>
+                android:text="전체보기 >" />
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
                 android:text="가장 많이 찾아본 여행 후기"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <HorizontalScrollView
                 android:id="@+id/HorizontalScrollView4"
                 android:layout_width="414dp"
                 android:layout_height="180dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <ImageButton
                         android:id="@+id/imageButton2_1"
                         android:layout_width="300dp"
@@ -247,6 +262,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:src="@color/gray_bar" />
+
                     <ImageButton
                         android:id="@+id/imageButton2_2"
                         android:layout_width="300dp"
@@ -256,6 +272,7 @@
                         android:src="@color/gray_bar" />
                 </LinearLayout>
             </HorizontalScrollView>
+
             <Button
                 android:id="@+id/WatchReviewAll2"
                 android:layout_width="match_parent"
@@ -263,7 +280,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:backgroundTint="@color/white"
-                android:text="전체보기 >"/>
+                android:text="전체보기 >" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
