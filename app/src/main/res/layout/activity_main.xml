@@ -134,10 +134,9 @@
     <Button
         android:id="@+id/btnSignin2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="1"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/empty"
         android:fontFamily="@font/pretendard_medium"
         android:minWidth="0dp"

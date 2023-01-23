@@ -6,15 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import androidx.fragment.app.Fragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     lateinit var edtEmail : EditText
     lateinit var edtPassword : EditText
     lateinit var btnLogin : Button
     lateinit var btnSignin : Button
+    lateinit var btnSignin2 : Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         edtPassword = findViewById(R.id.edtPassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnSignin = findViewById(R.id.btnSignin)
+        btnSignin2 = findViewById(R.id.btnSignin2)
 
     //    btnLogin.isEnabled = false
 
@@ -45,9 +49,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-    btnLogin.setOnClickListener({
-        val intent = Intent(this, MainHomeActivity::class.java)
-        startActivity(intent)
+        btnLogin.setOnClickListener({
+            val intent = Intent(this, MainHomeActivity::class.java)
+            startActivity(intent)
     })
         btnSignin.setOnClickListener({
             val intent = Intent(this, Signin::class.java)
