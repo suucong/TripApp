@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(){
             }
         })
         btnLogin.setOnClickListener({
-            val intent = Intent(this, MainHomeActivity::class.java)
+            val intent = Intent(this, NaviActivity::class.java)
             startActivity(intent)
     })
         btnSignin.setOnClickListener({

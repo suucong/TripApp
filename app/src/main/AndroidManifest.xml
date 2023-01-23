@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    인터넷 권한 추가-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,39 +15,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripApp"
         tools:targetApi="31">
-
-        <!-- 처음 시작하는 화면을 설정-->
         <activity
-            android:name=".Splash"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name = "android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            android:name=".Firebase"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <!-- 처음 시작하는 화면을 설정 -->
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".NaviActivity"
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NaviActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name = "android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".MainHomeActivity"></activity>
-        <activity android:name=".Signin"></activity>
+        <activity android:name=".MainHomeActivity" />
+        <activity android:name=".Signin" />
     </application>
 
 </manifest>
