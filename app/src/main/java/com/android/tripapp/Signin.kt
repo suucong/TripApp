@@ -101,7 +101,6 @@ class Signin : AppCompatActivity() {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     // 달력 보여주고 textView에 입력하기 함수

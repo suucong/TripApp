@@ -57,5 +57,10 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, Signin::class.java)
             startActivity(intent)
         })
+
+        btnSignin2.setOnClickListener {
+            var intent = Intent(this, NaviActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
