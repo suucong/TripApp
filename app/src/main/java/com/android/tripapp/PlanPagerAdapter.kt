@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class PlanPagerAdapter (fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity){
     var fragments : ArrayList<Fragment> = ArrayList()
+    var titleList : ArrayList<String> = ArrayList()
 
     override fun getItemCount(): Int {
         return fragments.size
@@ -15,9 +16,10 @@ class PlanPagerAdapter (fragmentActivity: FragmentActivity) : FragmentStateAdapt
         return fragments[position]
     }
 
-    fun addFragment(fragment: Fragment){
+    fun addFragment(fragment : Fragment, title : String){
         fragments.add(fragment)
         notifyItemInserted(fragments.size - 1)
+        titleList.add(title)
     }
 
     fun removeFragment(){

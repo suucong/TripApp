@@ -40,8 +40,8 @@ class PlanFragment : Fragment() {
 
         val planPagerAdapter = PlanPagerAdapter(requireActivity())
         // 2개의 fragment add
-        planPagerAdapter.addFragment(PlanNextFragment())
-        planPagerAdapter.addFragment(PlanPrevFragment())
+        planPagerAdapter.addFragment(PlanNextFragment(), "예정된 계획")
+        planPagerAdapter.addFragment(PlanPrevFragment(), "지난 계획")
 
 
         // adapter
@@ -55,7 +55,10 @@ class PlanFragment : Fragment() {
 
         // tablayout attach
         TabLayoutMediator(tabLayout, viewPager){ tab, position ->
-            tab.text = "Tab ${position+1}"
+            when (position) {
+                0 -> tab.text = "예정된 계획"
+                1 -> tab.text = "지난 계획"
+            }
         }.attach()
     }
 }
