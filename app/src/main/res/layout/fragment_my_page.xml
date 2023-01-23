@@ -57,4 +57,75 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/myPlan"
+        android:layout_width="162dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:text="내가 새운 계획"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myRecord"
+        android:layout_width="162dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
+        android:text="내가 적은 기록"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myInformation"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="개인정보수정"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/notice"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="공지사항"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clause" />
+
+    <Button
+        android:id="@+id/setUp"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="환경 설정"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myInformation" />
+
+    <Button
+        android:id="@+id/center"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="고객센터"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setUp" />
+
+    <Button
+        android:id="@+id/clause"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="약관 및 정책"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
