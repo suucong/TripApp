@@ -86,28 +86,27 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDayGo1_Pt"
+                            android:id="@+id/tvDayGo_Pt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="가는 날" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/tvDayGo2_Pt"
-                                android:layout_width="139dp"
-                                android:layout_height="39dp"
-                                android:layout_marginTop="16dp"
+                                android:id="@+id/tvDateGo_Pt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:hint="####.##.## (#)"
                                 android:inputType="date" />
 
                             <Button
                                 android:id="@+id/btnCalendarGo_Pt"
-                                android:layout_width="64dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="51dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="📅" />
                         </LinearLayout>
@@ -123,7 +122,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDayCome1_Pt"
+                            android:id="@+id/tvDayCome_Pt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="오는 날" />
@@ -134,17 +133,16 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/tvDayCome2_Pt"
-                                android:layout_width="139dp"
-                                android:layout_height="39dp"
-                                android:layout_marginTop="16dp"
+                                android:id="@+id/tvDateCome_Pt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:hint="####.##.## (#)"
                                 android:inputType="date" />
 
                             <Button
                                 android:id="@+id/btnCalendarCome_Pt"
-                                android:layout_width="64dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="51dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="📅" />
                         </LinearLayout>
