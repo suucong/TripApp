@@ -1,12 +1,14 @@
 package com.android.tripapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -17,6 +19,7 @@ private const val ARG_PARAM2 = "param2"
 class PlanFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
+    lateinit var btnAddPlan : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +35,7 @@ class PlanFragment : Fragment() {
         val view:View = inflater.inflate(R.layout.fragment_plan, container, false)
         viewPager = view.findViewById(R.id.planViewPager)
         tabLayout = view.findViewById(R.id.planTab)
+        btnAddPlan = view.findViewById(R.id.btnAddPlan_Pn)
         return view
     }
 
@@ -60,5 +64,13 @@ class PlanFragment : Fragment() {
                 1 -> tab.text = "지난 계획"
             }
         }.attach()
+
+        // AddPlan button click event
+        btnAddPlan.setOnClickListener {
+            activity?.let{
+                val intent = Intent(context, PlanWhereActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
