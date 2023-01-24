@@ -4,23 +4,20 @@ import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.android.tripapp.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class Signin : AppCompatActivity() {
-
-    lateinit var dbMemberInfo: DBMemberInfo
-    lateinit var sqlitedb: SQLiteDatabase
-
     lateinit var edtEmail_Si: EditText
     lateinit var edtPassword_Si: EditText
     lateinit var edtRePassword_Si: EditText
@@ -28,8 +25,7 @@ class Signin : AppCompatActivity() {
     lateinit var btnSignin_Si: Button
     lateinit var btnBackToLogin_Si: Button
 
-//    // 전역으로 사용할 FirebaseAuth
-//    lateinit var auth : FirebaseAuth
+    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +37,8 @@ class Signin : AppCompatActivity() {
         edtNickName_Si = findViewById(R.id.edtNickname_Si)
         btnSignin_Si = findViewById(R.id.btnSignin_Si)
         btnBackToLogin_Si = findViewById(R.id.btnBackToLogin_Si)
+
+        auth = FirebaseAuth.getInstance()
 
         // 회원가입 버튼 클릭 이벤트
         btnSignin_Si.setOnClickListener {
@@ -71,12 +69,18 @@ class Signin : AppCompatActivity() {
                     dialog_confirm.setPositiveButton(
                         "회원가입",
                         DialogInterface.OnClickListener { dialog, id ->
+                            auth.createUserWithEmailAndPassword(str_email, str_repassword)
+                                .addOnCompleteListener { task ->
+                                    if(task.isSuccessful) {
+                                        Toast.makeText(this, "회원가입에 성공했습니다!", Toast.LENGTH_SHORT).show()
+                                    }
+                                    else {
+                                        Toast.makeText(this,"이미 존재하는 계정이거나, 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                                    }
+                                }
                             var intent = Intent(this, NaviActivity::class.java)
                             startActivity(intent)
-                            Toast.makeText(applicationContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT)
-                                .show()
                         })
-
                     dialog_confirm.setNegativeButton(
                         "다시 작성하기",
                         DialogInterface.OnClickListener { dialog, id ->
@@ -101,7 +105,6 @@ class Signin : AppCompatActivity() {
         }
     }
 }
-
 
 //    // 달력 보여주고 textView에 입력하기 함수
 //    private fun showDatePicker() {

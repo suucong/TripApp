@@ -9,7 +9,9 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity(){
 
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity(){
     lateinit var btnLogin : Button
     lateinit var btnSignin : Button
     lateinit var btnSignin2 : Button
+
+    lateinit var auth: FirebaseAuth
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +33,8 @@ class MainActivity : AppCompatActivity(){
         btnLogin = findViewById(R.id.btnLogin)
         btnSignin = findViewById(R.id.btnSignin)
         btnSignin2 = findViewById(R.id.btnSignin2)
+
+        auth = FirebaseAuth.getInstance()
 
     //    btnLogin.isEnabled = false
 
@@ -50,8 +56,21 @@ class MainActivity : AppCompatActivity(){
             }
         })
         btnLogin.setOnClickListener({
-            val intent = Intent(this, NaviActivity::class.java)
-            startActivity(intent)
+            val email: String= edtEmail.text.toString()
+            val password: String = edtPassword.text.toString()
+
+            auth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener { task ->
+                    if(task.isSuccessful) {
+                        Toast.makeText(this,"로그인에 성공했습니다!",Toast.LENGTH_SHORT).show()
+                        // 액티비티 종료
+                        finish()
+                        val intent = Intent(this, NaviActivity::class.java)
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(this,"아이디와 비밀번호를 확인해주세요.",Toast.LENGTH_SHORT).show()
+                    }
+                }
     })
         btnSignin.setOnClickListener({
             val intent = Intent(this, Signin::class.java)
