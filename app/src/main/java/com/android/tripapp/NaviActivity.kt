@@ -3,7 +3,6 @@ package com.android.tripapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.android.tripapp.databinding.ActivityMainBinding
 import com.android.tripapp.databinding.ActivityNaviBinding
 
 class NaviActivity : AppCompatActivity() {
