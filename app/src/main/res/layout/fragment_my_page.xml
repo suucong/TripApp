@@ -58,6 +58,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:id="@+id/toLogOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_hard_round"
+        android:fontFamily="@font/pretendard_bold"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="로그아웃하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/myPlan"
         android:layout_width="162dp"
         android:layout_height="68dp"

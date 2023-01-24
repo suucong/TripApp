@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class MainActivity : AppCompatActivity(){
 
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity(){
     lateinit var btnSignin2 : Button
 
     lateinit var auth: FirebaseAuth
+
+    @Override
+    override fun onStart() {
+        super.onStart()
+        val user = auth?.currentUser
+    }
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
