@@ -15,12 +15,12 @@ class PlanWhereActivity : AppCompatActivity() {
         setContentView(R.layout.activity_plan_where)
 
         btnBackPlan = findViewById(R.id.btnBackPlan_Pnwr)
-        btnNext_where = findViewById(R.id.btnNext_Pnwr)
+    //    btnNext_where = findViewById(R.id.btnNext_Pnwr)
 
-        btnNext_where.setOnClickListener {
-            var intent = Intent(this, PlanWhenActivity::class.java)
-            startActivity(intent)
-        }
+//        btnNext_where.setOnClickListener {
+//            var intent = Intent(this, PlanWhenActivity::class.java)
+//            startActivity(intent)
+//        }
 
 //        btnBackPlan.setOnClickListener{
 //            var intent = Intent(this, NaviActivity::class.java)
