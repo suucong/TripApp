@@ -1,27 +1,29 @@
 package com.android.tripapp
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class PlanPagerAdapter (fm : FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class PlanPagerAdapter (fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity){
+    var fragments : ArrayList<Fragment> = ArrayList()
+    var titleList : ArrayList<String> = ArrayList()
 
-    override fun getCount(): Int {
-        return 2
+    override fun getItemCount(): Int {
+        return fragments.size
     }
 
-    override fun getItem(position: Int): Fragment {
-        return when (position) {
-            0 -> PlanNextFragment()
-            else -> PlanPrevFragment()
-        }
+    override fun createFragment(position: Int): Fragment {
+        return fragments[position]
     }
 
-    override fun getPageTitle(position: Int): CharSequence? {
-        return when (position){
-            0 -> "다가올 계획"
-            else -> "지난 계획"
+    fun addFragment(fragment : Fragment, title : String){
+        fragments.add(fragment)
+        notifyItemInserted(fragments.size - 1)
+        titleList.add(title)
+    }
 
-        }
+    fun removeFragment(){
+        fragments.removeLast()
+        notifyItemRemoved(fragments.size)
     }
 }

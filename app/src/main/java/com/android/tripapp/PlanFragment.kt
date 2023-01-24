@@ -1,52 +1,64 @@
 package com.android.tripapp
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class PlanFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plan, container, false)
+        val view:View = inflater.inflate(R.layout.fragment_plan, container, false)
+        viewPager = view.findViewById(R.id.planViewPager)
+        tabLayout = view.findViewById(R.id.planTab)
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PlanFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PlanFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val planPagerAdapter = PlanPagerAdapter(requireActivity())
+        // 2개의 fragment add
+        planPagerAdapter.addFragment(PlanNextFragment(), "예정된 계획")
+        planPagerAdapter.addFragment(PlanPrevFragment(), "지난 계획")
+
+
+        // adapter
+        viewPager.adapter = planPagerAdapter
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int){
+                super.onPageSelected(position)
+                Log.e("ViewPagerFragment", "Page ${position+1}")
             }
+        })
+
+        // tablayout attach
+        TabLayoutMediator(tabLayout, viewPager){ tab, position ->
+            when (position) {
+                0 -> tab.text = "예정된 계획"
+                1 -> tab.text = "지난 계획"
+            }
+        }.attach()
     }
 }

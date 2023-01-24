@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlanNextFragment">
+    android:orientation="vertical"
+    tools:context=".PlanNextFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <Button
+                    android:id="@+id/btn1_Pn"
+                    android:layout_width="93dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWhere1_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="192dp"
+                    android:text="부산 여행"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn1_Pn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.333" />
+
+                <TextView
+                    android:id="@+id/tvWhen1_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="2023.02.11 ~ 02.15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn1_Pn"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWhere1_Pn" />
+
+                <TextView
+                    android:id="@+id/tvWho1_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="혼자"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvWhen1_Pn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="106dp">
+
+                <Button
+                    android:id="@+id/btn2_Pn"
+                    android:layout_width="93dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWhere2_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="제주도 여행"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn2_Pn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35000002" />
+
+                <TextView
+                    android:id="@+id/tvWhen2_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="2023.02.21 ~ 02.25"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn2_Pn"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWhere2_Pn" />
+
+                <TextView
+                    android:id="@+id/tvWho2_Pn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="가족"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvWhen2_Pn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
