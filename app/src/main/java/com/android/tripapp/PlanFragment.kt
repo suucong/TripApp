@@ -9,9 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -20,6 +22,8 @@ class PlanFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
     lateinit var btnAddPlan : Button
+    private lateinit var user: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,10 +36,11 @@ class PlanFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_plan, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_plan, container, false)
         viewPager = view.findViewById(R.id.planViewPager)
         tabLayout = view.findViewById(R.id.planTab)
         btnAddPlan = view.findViewById(R.id.btnAddPlan_Pn)
+
         return view
     }
 
@@ -43,6 +48,7 @@ class PlanFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val planPagerAdapter = PlanPagerAdapter(requireActivity())
+        user = FirebaseAuth.getInstance()
         // 2개의 fragment add
         planPagerAdapter.addFragment(PlanNextFragment(), "예정된 계획")
         planPagerAdapter.addFragment(PlanPrevFragment(), "지난 계획")
@@ -65,11 +71,24 @@ class PlanFragment : Fragment() {
             }
         }.attach()
 
-        // AddPlan button click event
-        btnAddPlan.setOnClickListener {
-            activity?.let{
-                val intent = Intent(context, PlanWhereActivity::class.java)
-                startActivity(intent)
+        if(user.currentUser != null) {
+            user.currentUser?.let {
+                // AddPlan button click event
+                btnAddPlan.setOnClickListener {
+                    activity?.let{
+                        val intent = Intent(context, PlanWhereActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
+            }
+        }
+        else {
+            btnAddPlan.setOnClickListener {
+                activity?.let{
+                    Toast.makeText(getActivity(), "로그인이 필요합니다.", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(context, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
     }
