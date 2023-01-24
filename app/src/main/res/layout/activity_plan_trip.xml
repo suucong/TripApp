@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PlanWhereActivity">
+    tools:context=".PlanTripActivity">
 
     <Button
-        android:id="@+id/btnBackPlan_Pnwr"
+        android:id="@+id/btnBackPlan_Pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="여행 계획"
@@ -25,12 +25,13 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/LinearLayout_Where"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvWhere_Pnwr"
+                    android:id="@+id/tvWhere_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -39,14 +40,14 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <SearchView
-                    android:id="@+id/svWhere_Pnwr"
+                    android:id="@+id/svWhere_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:queryHint="도시를 검색해 보세요." />
 
                 <TextView
-                    android:id="@+id/tvPlace_Pnwr"
+                    android:id="@+id/tvPlace_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -56,13 +57,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/LinearLayout_When"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvWhen_Pnwn2"
+                    android:id="@+id/tvWhen_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -70,16 +72,11 @@
                     android:text="언제 떠나시나요? 📅"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                <CalendarView
-                    android:id="@+id/calendar_Pnwn2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -89,43 +86,75 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDayGo1_Pnwn"
+                            android:id="@+id/tvDayGo1_Pt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="가는 날" />
 
-                        <TextView
-                            android:id="@+id/tvDayGo2_Pnwn"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:hint="####.##.## (#)" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvDayGo2_Pt"
+                                android:layout_width="139dp"
+                                android:layout_height="39dp"
+                                android:layout_marginTop="16dp"
+                                android:hint="####.##.## (#)"
+                                android:inputType="date" />
+
+                            <Button
+                                android:id="@+id/btnCalendarGo_Pt"
+                                android:layout_width="64dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="16dp"
+                                android:text="📅" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDayCome1_Pnwn"
+                            android:id="@+id/tvDayCome1_Pt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="오는 날" />
 
-                        <TextView
-                            android:id="@+id/tvDayCome2_Pnwn"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:hint="####.##.## (#)" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvDayCome2_Pt"
+                                android:layout_width="139dp"
+                                android:layout_height="39dp"
+                                android:layout_marginTop="16dp"
+                                android:hint="####.##.## (#)"
+                                android:inputType="date" />
+
+                            <Button
+                                android:id="@+id/btnCalendarCome_Pt"
+                                android:layout_width="64dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="16dp"
+                                android:text="📅" />
+                        </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/LinearLayout_Title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
