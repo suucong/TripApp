@@ -76,7 +76,7 @@ class PlanFragment : Fragment() {
                 // AddPlan button click event
                 btnAddPlan.setOnClickListener {
                     activity?.let{
-                        val intent = Intent(context, PlanWhereActivity::class.java)
+                        val intent = Intent(context, PlanTripActivity::class.java)
                         startActivity(intent)
                     }
                 }
