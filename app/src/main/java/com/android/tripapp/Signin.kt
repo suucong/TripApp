@@ -72,14 +72,14 @@ class Signin : AppCompatActivity() {
                             auth.createUserWithEmailAndPassword(str_email, str_repassword)
                                 .addOnCompleteListener { task ->
                                     if(task.isSuccessful) {
+                                        var intent = Intent(this, NaviActivity::class.java)
+                                        startActivity(intent)
                                         Toast.makeText(this, "회원가입에 성공했습니다!", Toast.LENGTH_SHORT).show()
                                     }
                                     else {
-                                        Toast.makeText(this,"이미 존재하는 계정이거나, 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this,"이미 존재하는 계정입니다. 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
                                     }
                                 }
-                            var intent = Intent(this, NaviActivity::class.java)
-                            startActivity(intent)
                         })
                     dialog_confirm.setNegativeButton(
                         "다시 작성하기",
