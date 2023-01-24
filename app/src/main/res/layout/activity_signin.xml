@@ -20,19 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="630dp">
 
-            <Button
-                android:id="@+id/btnCalendar_Si"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginEnd="28dp"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:text="달력"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBirth_Si"
-                tools:ignore="TouchTargetSizeCheck" />
-
             <EditText
                 android:id="@+id/edtEmail_Si"
                 android:layout_width="362dp"
@@ -63,30 +50,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNickname_Si" />
 
             <TextView
-                android:id="@+id/tvBirth_Si"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="99dp"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="생년월일"
-                android:textColor="@color/black"
-                android:textSize="14dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvRePassword_Si" />
-
-            <TextView
                 android:id="@+id/tvNickname_Si"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="99dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="37dp"
                 android:fontFamily="@font/pretendard_bold"
                 android:text="닉네임"
                 android:textColor="@color/black"
                 android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBirth_Si" />
+                app:layout_constraintTop_toBottomOf="@+id/edtRePassword_Si" />
 
             <TextView
                 android:id="@+id/tvEmail_Si"
@@ -156,20 +130,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPassword_Si"
                 tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/tvSelectBirth_Si"
-                android:layout_width="305dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/edittext_round"
-                android:fontFamily="@font/pretendard_regular"
-                android:hint="달력에서 생년월일을 선택하세요"
-                android:padding="15dp"
-                android:textSize="14dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBirth_Si" />
 
             <TextView
                 android:id="@+id/tvPassword_Si"
