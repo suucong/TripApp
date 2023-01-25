@@ -1,21 +1,16 @@
 package com.android.tripapp
 
 import android.app.AlertDialog
-import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
-import com.android.tripapp.databinding.ActivityMainBinding
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import java.util.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class Signin : AppCompatActivity() {
     lateinit var edtEmail_Si: EditText
@@ -26,6 +21,7 @@ class Signin : AppCompatActivity() {
     lateinit var btnBackToLogin_Si: Button
 
     lateinit var auth: FirebaseAuth
+    lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +35,7 @@ class Signin : AppCompatActivity() {
         btnBackToLogin_Si = findViewById(R.id.btnBackToLogin_Si)
 
         auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
 
         // 회원가입 버튼 클릭 이벤트
         btnSignin_Si.setOnClickListener {
@@ -71,13 +68,19 @@ class Signin : AppCompatActivity() {
                         DialogInterface.OnClickListener { dialog, id ->
                             auth.createUserWithEmailAndPassword(str_email, str_repassword)
                                 .addOnCompleteListener { task ->
-                                    if(task.isSuccessful) {
+                                    if (task.isSuccessful) {
                                         var intent = Intent(this, NaviActivity::class.java)
                                         startActivity(intent)
-                                        Toast.makeText(this, "회원가입에 성공했습니다!", Toast.LENGTH_SHORT).show()
-                                    }
-                                    else {
-                                        Toast.makeText(this,"이미 존재하는 계정입니다. 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                                        val User = User(str_email, str_repassword, str_nickname)
+                                        database.child(str_nickname).setValue(User)
+                                        Toast.makeText(this, "회원가입에 성공했습니다!", Toast.LENGTH_SHORT)
+                                            .show()
+                                    } else {
+                                        Toast.makeText(
+                                            this,
+                                            "이미 존재하는 계정입니다. 회원가입에 실패했습니다.",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
                                     }
                                 }
                         })
@@ -106,29 +109,6 @@ class Signin : AppCompatActivity() {
     }
 }
 
-//    // 달력 보여주고 textView에 입력하기 함수
-//    private fun showDatePicker() {
-//        val calendar : Calendar = Calendar.getInstance()
-//
-//        val iYear = calendar.get(Calendar.YEAR) // 년
-//        val iMonth = calendar.get(Calendar.MONTH) // 월
-//        val iDay = calendar.get(Calendar.DAY_OF_MONTH) // 일
-//
-//        // 달력 호출
-//        val datePicker : DatePickerDialog = DatePickerDialog(this,
-//        DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
-//
-//            // 1월은 0부터 시작해서 +1 해줌
-//            val tMonth : Int = month + 1
-//
-//            // 년, 월, 일
-//            val date : String = "$year / $tMonth / $day"
-//
-//            // textview에 선택한 날짜 입력
-//            tvSelectBirth_Si.text = date
-//        }, iYear, iMonth, iDay)
-//
-//        // 달력 호출
-//        datePicker.show()
-//    }
-//}
+
+
+
