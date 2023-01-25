@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/Background"
     tools:context=".MyPageFragment">
 
     <ImageButton
         android:id="@+id/MyPageProfileButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="34dp"
         android:background="@drawable/circleprofilebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/pretendard_extrabold"
         android:text="로그인 하세요"
         android:textColor="#000000"
@@ -73,41 +73,60 @@
 
     <Button
         android:id="@+id/myPlan"
-        android:layout_width="162dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="150dp"
-        android:text="내가 새운 계획"
+        android:layout_width="182dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:backgroundTint="@color/HintText"
+        android:fontFamily="@font/pretendard_semibold"
+        android:gravity="top"
+        android:padding="15dp"
+        android:text="내가 세운 계획"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/MyPageProfileButton" />
 
     <Button
         android:id="@+id/myRecord"
-        android:layout_width="162dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="182dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="내가 적은 기록"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/MyPageProfileButton" />
 
     <Button
         android:id="@+id/myInformation"
         android:layout_width="415dp"
         android:layout_height="60dp"
-        android:layout_marginTop="250dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="개인정보수정"
+        android:background="@color/empty"
+        android:backgroundTint="@color/Background"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:text="      개인정보수정"
+        android:textColor="@color/MainText"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/notice"
         android:layout_width="415dp"
         android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="공지사항"
+        android:background="@color/empty"
+        android:backgroundTint="@color/Background"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:text="      공지사항"
+        android:textColor="@color/MainText"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clause" />
@@ -116,8 +135,15 @@
         android:id="@+id/setUp"
         android:layout_width="415dp"
         android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="환경 설정"
+        android:background="@color/empty"
+        android:backgroundTint="@color/Background"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:text="      환경설정"
+        android:textColor="@color/MainText"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myInformation" />
@@ -126,20 +152,64 @@
         android:id="@+id/center"
         android:layout_width="415dp"
         android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="고객센터"
+        android:background="@color/empty"
+        android:backgroundTint="@color/Background"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:text="      고객센터"
+        android:textColor="@color/MainText"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setUp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/clause"
         android:layout_width="415dp"
         android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="약관 및 정책"
+        android:background="@color/empty"
+        android:backgroundTint="@color/Background"
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="center_vertical"
+        android:paddingLeft="32dp"
+        android:text="      약관 및 정책"
+        android:textColor="@color/MainText"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/center" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="414dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRecord" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="414dp"
+        android:layout_height="10dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setUp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="414dp"
+        android:layout_height="10dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

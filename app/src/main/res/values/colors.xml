@@ -17,6 +17,9 @@
     <color name="Error">#FFE41F1F</color>
     <color name="Background">#FFF9F9F7</color>
 
+    <color name="darkgray">#FFD9D9D9</color>
+    <color name="gray">#FFF1F1F1</color>
+
 
     <color name="g80D9D9D9">#80D9D9D9</color>
     <color name="gD9D9D9">#D9D9D9</color>
@@ -24,6 +27,5 @@
     <color name="g555555">#555555</color>
     <color name="g80000000">#80000000</color>
     <color name ="black_bar">#000000</color>
-    <color name="gray_bar">#D5D5D5</color>
 
 </resources>
