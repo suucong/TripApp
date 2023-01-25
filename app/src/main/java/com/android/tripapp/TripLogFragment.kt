@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class TripLogFragment : Fragment() {
     private lateinit var user: FirebaseAuth
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,7 @@ class TripLogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         user = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
         val view = inflater.inflate(R.layout.fragment_trip_log, null)
         val LoginMessage_ = view.findViewById<TextView>(R.id.LoginMessage_)
         val AddTripLogButton = view.findViewById<ImageButton>(R.id.AddTripLogButton)

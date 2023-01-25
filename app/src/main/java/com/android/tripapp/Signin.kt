@@ -72,7 +72,8 @@ class Signin : AppCompatActivity() {
                                         var intent = Intent(this, NaviActivity::class.java)
                                         startActivity(intent)
                                         val User = User(str_email, str_repassword, str_nickname)
-                                        database.child(str_nickname).setValue(User)
+                                        val uid = auth.currentUser?.uid
+                                        database.child(uid.toString()).setValue(User)
                                         Toast.makeText(this, "회원가입에 성공했습니다!", Toast.LENGTH_SHORT)
                                             .show()
                                     } else {
