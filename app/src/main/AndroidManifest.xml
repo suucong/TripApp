@@ -14,27 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TripApp"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".PlanWhenActivity"-->
-<!--            android:exported="false">-->
-<!--            <meta-data-->
-<!--                android:name="android.app.lib_name"-->
-<!--                android:value="" />-->
-<!--        </activity>-->
+
         <activity
             android:name=".PlanTripActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
-        <activity
-            android:name=".Firebase"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity> <!-- 처음 시작하는 화면을 설정 -->
+
+ <!-- 처음 시작하는 화면을 설정 -->
         <activity
             android:name=".Splash"
             android:exported="true"
@@ -67,6 +53,7 @@
         </activity>
         <activity android:name=".MainHomeActivity" />
         <activity android:name=".Signin" />
+        <activity android:name=".PlanTripDetailActivity"/>
     </application>
 
 </manifest>
