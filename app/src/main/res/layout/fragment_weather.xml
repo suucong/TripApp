@@ -6,13 +6,25 @@
     tools:context=".WeatherFragment">
 
     <Button
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:text="날씨 정보"
+        android:textSize="18sp"
+        android:fontFamily="@font/pretendard_bold"
+        android:textColor="@color/MainText"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:background="@drawable/shadow" />
+    />
+
+    <Button
         android:id="@+id/WeatherButton_1"
         android:layout_width="124dp"
         android:layout_height="34dp"
         android:layout_marginLeft="267dp"
         android:layout_marginTop="55dp"
         android:background="@drawable/button_round"
-        android:src="@color/gray_bar"
+        android:src="@color/SubText"
         android:fontFamily="@font/pretendard_regular"
         android:text="도시 검색"
         android:textSize="15sp"
@@ -24,23 +36,25 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="89dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_regular"
         android:text="현재 위치"
-        android:textSize="15sp"
-        android:backgroundTint="#FFFFFF" />
+        android:textColor="@color/SubText"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/PresentPositionName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="110dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_extrabold"
         android:text="서울"
+        android:textColor="@color/MainText"
         android:textSize="28sp"
-        android:textStyle="bold"
-        android:backgroundTint="#FFFFFF" />
+        android:textStyle="bold" />
 
    <ImageView
         android:id="@+id/WeatherImage_1"
@@ -55,11 +69,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="156dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_extrabold"
         android:text="3°C"
+        android:textColor="@color/MainText"
         android:textSize="52sp"
-        android:textStyle="bold"
-        android:backgroundTint="#FFFFFF" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Temperature_2"
@@ -67,10 +82,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="240dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_regular"
         android:text="5°C / -3°C 체감온도 0°C"
-        android:textSize="15sp"
-        android:backgroundTint="#FFFFFF" />
+        android:textColor="@color/SubText"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/Weather_1"
@@ -78,11 +94,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="280dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_extrabold"
         android:text="맑음"
+        android:textColor="@color/SubText"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="#FFFFFF" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Weather_2"
@@ -90,10 +107,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="310dp"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/pretendard_regular"
         android:text="구름이 없는 맑은 날씨"
-        android:textSize="15sp"
-        android:backgroundTint="#FFFFFF" />
+        android:textColor="@color/SubText"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/WeatherButton_2"
