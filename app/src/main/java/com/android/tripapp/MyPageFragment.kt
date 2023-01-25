@@ -10,9 +10,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 public class MyPageFragment : Fragment() {
     private lateinit var user: FirebaseAuth
+    lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +29,7 @@ public class MyPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         user = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
         val view = inflater.inflate(R.layout.fragment_my_page, null)
         val toLogoutButton = view.findViewById<Button>(R.id.toLogOutButton)
         val toLoginButton = view.findViewById<Button>(R.id.toLoginButton)

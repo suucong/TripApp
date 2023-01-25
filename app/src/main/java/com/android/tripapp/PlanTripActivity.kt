@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import org.w3c.dom.Text
+import java.text.SimpleDateFormat
 import java.util.*
 
 class PlanTripActivity : AppCompatActivity() {
@@ -21,7 +22,8 @@ class PlanTripActivity : AppCompatActivity() {
     lateinit var tvDateCome : TextView
     lateinit var edtTitle : EditText
 
-    private lateinit var selectDate : Calendar
+    private lateinit var selectDateGo : Calendar
+    private lateinit var selectDateCome : Calendar
     val calendar : Calendar = Calendar.getInstance()
 
     val iYear = calendar.get(Calendar.YEAR) // 년
@@ -47,7 +49,7 @@ class PlanTripActivity : AppCompatActivity() {
             val datePicker : DatePickerDialog = DatePickerDialog(this,
                 DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
                     // 선택한 날짜 저장
-                    selectDate = Calendar.getInstance().apply { set(year, month, day) }
+                    selectDateGo = Calendar.getInstance().apply { set(year, month, day) }
 
                     // 1월은 0부터 시작해서 +1 해줌
                     val tMonth : Int = month + 1
@@ -71,6 +73,8 @@ class PlanTripActivity : AppCompatActivity() {
             // 달력 호출
             val datePicker : DatePickerDialog = DatePickerDialog(this,
                 DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+                    // 선택한 날짜 저장
+                    selectDateCome = Calendar.getInstance().apply { set(year, month, day) }
 
                     // 1월은 0부터 시작해서 +1 해줌
                     val tMonth : Int = month + 1
@@ -82,7 +86,7 @@ class PlanTripActivity : AppCompatActivity() {
                     tvDateCome.text = date
                 }, iYear, iMonth, iDay).apply {
                     // 가는 날보다 이전 날짜 선택할 수 없도록 함.
-                    datePicker.minDate = selectDate.timeInMillis
+                    datePicker.minDate = selectDateGo.timeInMillis
             }
 
             // 달력 호출
@@ -93,9 +97,13 @@ class PlanTripActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             val planTitle : String = edtTitle.text.toString()
             val planDate : String = "${tvDateGo.text} ~ ${tvDateCome.text}"
+            val dateDiff : String
+                = "${(selectDateCome.timeInMillis-selectDateGo.timeInMillis) / (24*60*60*1000) + 1}"
+
             var intent = Intent(this, PlanTripDetailActivity::class.java)
             intent.putExtra("planTitle", planTitle)
             intent.putExtra("planDate", planDate)
+            intent.putExtra("dateDiff", dateDiff)
             startActivity(intent)
         }
     }
