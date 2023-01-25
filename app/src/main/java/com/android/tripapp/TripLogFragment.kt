@@ -33,6 +33,7 @@ class TripLogFragment : Fragment() {
 
         if(user.currentUser != null) {
             user.currentUser?.let {
+//                val nickname_ = database.child("Users").child(it.uid).add
                 LoginMessage_.text = it.email
             }
         }
