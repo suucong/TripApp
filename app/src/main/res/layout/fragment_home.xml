@@ -85,7 +85,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -93,7 +93,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton4"
@@ -101,7 +101,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton5"
@@ -109,7 +109,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton6"
@@ -118,7 +118,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -152,7 +152,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_2"
@@ -160,7 +160,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_3"
@@ -168,7 +168,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_4"
@@ -176,7 +176,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_5"
@@ -184,7 +184,7 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_6"
@@ -193,7 +193,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -226,7 +226,7 @@
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton_2_"
@@ -235,7 +235,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -279,7 +279,7 @@
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
 
                     <ImageButton
                         android:id="@+id/imageButton2_2"
@@ -288,7 +288,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray_bar" />
+                        android:src="@color/gray" />
                 </LinearLayout>
             </HorizontalScrollView>
 
