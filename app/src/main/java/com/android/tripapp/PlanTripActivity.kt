@@ -1,9 +1,11 @@
 package com.android.tripapp
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import org.w3c.dom.Text
 import java.util.*
@@ -13,9 +15,11 @@ class PlanTripActivity : AppCompatActivity() {
     lateinit var btnBackPlan : Button
     lateinit var btnCalendarGo : Button
     lateinit var btnCalendarCome : Button
+    lateinit var btnNext : Button
 
     lateinit var tvDateGo : TextView
     lateinit var tvDateCome : TextView
+    lateinit var edtTitle : EditText
 
     private lateinit var selectDate : Calendar
     val calendar : Calendar = Calendar.getInstance()
@@ -31,9 +35,11 @@ class PlanTripActivity : AppCompatActivity() {
         btnBackPlan = findViewById(R.id.btnBackPlan_Pt)
         btnCalendarGo = findViewById(R.id.btnCalendarGo_Pt)
         btnCalendarCome = findViewById(R.id.btnCalendarCome_Pt)
+        btnNext = findViewById(R.id.btnNext_Pt)
 
         tvDateGo = findViewById(R.id.tvDateGo_Pt)
         tvDateCome = findViewById(R.id.tvDateCome_Pt)
+        edtTitle = findViewById(R.id.edtTitle_Pt)
 
         // 가는 날 달력 버튼 클릭 이벤트
         btnCalendarGo.setOnClickListener {
@@ -83,5 +89,14 @@ class PlanTripActivity : AppCompatActivity() {
             datePicker.show()
         }
 
+        // 다음 버튼 클릭 이벤트
+        btnNext.setOnClickListener {
+            val planTitle : String = edtTitle.text.toString()
+            val planDate : String = "${tvDateGo.text} ~ ${tvDateCome.text}"
+            var intent = Intent(this, PlanTripDetailActivity::class.java)
+            intent.putExtra("planTitle", planTitle)
+            intent.putExtra("planDate", planDate)
+            startActivity(intent)
+        }
     }
 }

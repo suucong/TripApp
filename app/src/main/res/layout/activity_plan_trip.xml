@@ -100,7 +100,7 @@
                                 android:id="@+id/tvDateGo_Pt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="####.##.## (#)"
+                                android:hint="달력을 눌러 일자를 선택하세요"
                                 android:inputType="date" />
 
                             <Button
@@ -136,7 +136,7 @@
                                 android:id="@+id/tvDateCome_Pt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="####.##.## (#)"
+                                android:hint="달력을 눌러 일자를 선택하세요"
                                 android:inputType="date" />
 
                             <Button
@@ -158,7 +158,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvTitle"
+                    android:id="@+id/tvTitle_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -167,7 +167,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <EditText
-                    android:id="@+id/edtTitle"
+                    android:id="@+id/edtTitle_Pt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -176,7 +176,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnNext"
+                android:id="@+id/btnNext_Pt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
