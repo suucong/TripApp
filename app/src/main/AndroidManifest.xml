@@ -15,7 +15,7 @@
         android:theme="@style/Theme.TripApp"
         tools:targetApi="31">
         <activity
-            android:name=".PlanWhenActivity"
+            android:name=".PlanTripDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
