@@ -50,7 +50,7 @@ class PlanTripDetailActivity : AppCompatActivity() {
                 ll_main.orientation = LinearLayout.VERTICAL
 
                 val day_n = TextView(this)
-                day_n.text = "${i}일차"
+                day_n.text = "${i}일"
 
                 val ll_sub = LinearLayout(this)
                 ll_sub.layoutParams = params_mw
