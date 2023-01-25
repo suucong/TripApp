@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class TripLogFragment : Fragment() {
     private lateinit var user: FirebaseAuth
@@ -33,7 +34,11 @@ class TripLogFragment : Fragment() {
 
         if(user.currentUser != null) {
             user.currentUser?.let {
-//                val nickname_ = database.child("Users").child(it.uid).add
+//                val nickname_ = database.child("Users").child(it.uid).addValueEventListener(
+//                    ValueEventListener() {
+//
+//                    }
+//                )
                 LoginMessage_.text = it.email
             }
         }
