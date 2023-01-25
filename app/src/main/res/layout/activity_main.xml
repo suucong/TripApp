@@ -98,7 +98,7 @@
         android:layout_weight="3"
         android:fontFamily="@font/pretendard_regular"
         android:text="아직 회원이 아니신가요?"
-        android:textColor="@color/black"
+        android:textColor="@color/MainText"
         android:textSize="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -125,7 +125,7 @@
         android:minWidth="0dp"
         android:minHeight="0dp"
         android:text="회원가입"
-        android:textColor="@color/black"
+        android:textColor="@color/MainText"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
@@ -142,7 +142,7 @@
         android:minWidth="0dp"
         android:minHeight="0dp"
         android:text="로그인 없이 둘러보기"
-        android:textColor="@color/black"
+        android:textColor="@color/MainText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
