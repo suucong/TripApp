@@ -15,37 +15,38 @@
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPlanTitle_Ptd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:hint="여행 이름" />
+
+        <TextView
+            android:id="@+id/tvPlanDate_Ptd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:hint="여행 일자" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/LinearLayoutPlan_Ptd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvPlanTitle_Ptd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:hint="여행 이름" />
-
-                <TextView
-                    android:id="@+id/tvPlanDate_Ptd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:hint="여행 일자" />
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
