@@ -8,13 +8,12 @@
     tools:context=".MyPageFragment">
 
     <ImageButton
-        android:id="@+id/MyLogProfileButton"
+        android:id="@+id/MyPageProfileButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/circleprofilebutton"
-        android:backgroundTint="@color/gray_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +28,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/MyLogProfileButton"
+        app:layout_constraintStart_toEndOf="@id/MyPageProfileButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -41,7 +40,7 @@
         android:fontFamily="@font/pretendard_regular"
         android:text="앱 이름과 여행을 시작한지 15일"
         android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/MyLogProfileButton"
+        app:layout_constraintStart_toEndOf="@+id/MyPageProfileButton"
         app:layout_constraintTop_toBottomOf="@+id/LoginMessage" />
 
     <Button
@@ -78,7 +77,6 @@
         android:layout_height="68dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="150dp"
-        android:background="@color/gray_bar"
         android:text="내가 새운 계획"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -89,7 +87,6 @@
         android:layout_height="68dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="32dp"
-        android:background="@color/gray_bar"
         android:text="내가 적은 기록"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
