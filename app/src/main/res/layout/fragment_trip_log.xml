@@ -43,7 +43,7 @@
         android:fontFamily="@font/pretendard_extrabold"
         android:text="로그인 하세요"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/MyLogProfileButton"
         app:layout_constraintTop_toTopOf="parent" />

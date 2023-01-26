@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 
 class TripLogFragment : Fragment() {
     private lateinit var user: FirebaseAuth
@@ -25,26 +26,25 @@ class TripLogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         user = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
-
         val view = inflater.inflate(R.layout.fragment_trip_log, null)
         val LoginMessage_ = view.findViewById<TextView>(R.id.LoginMessage_)
         val AddTripLogButton = view.findViewById<ImageButton>(R.id.AddTripLogButton)
 
-        if(user.currentUser != null) {
+        if (user.currentUser != null) {
             user.currentUser?.let {
-//                val cUid = it.uid
-//                database.addValueEventListener(object: ValueEventListener {
-//                    override fun onDataChange(snapshot: DataSnapshot) {
-//                    }
-//
-//                    override fun onCancelled(error: DatabaseError) {
-//                    }
-//                })
-                LoginMessage_.text = it.email
+                LoginMessage_.text=""
+                val uid = it.uid
+                database =
+                    FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/")
+                        .getReference("Users")
+                database.child(uid).get().addOnSuccessListener {
+                    if (it.exists()) {
+                        val nickname_ = it.child("nickname").value
+                        LoginMessage_.text = nickname_.toString()
+                    }
+                }
             }
         }
-
         return view
     }
 
@@ -57,3 +57,5 @@ class TripLogFragment : Fragment() {
             }
     }
 }
+
+

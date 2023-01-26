@@ -40,7 +40,20 @@ public class MyPageFragment : Fragment() {
 
         if(user.currentUser != null) {
             user.currentUser?.let {
-                LoginMessage.text = it.email
+                LoginMessage.text=""
+                val uid = it.uid
+                database =
+                    FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/")
+                        .getReference("Users")
+                database.child(uid).get().addOnSuccessListener {
+                    val nickname = it.child("nickname").value
+                    LoginMessage.text = nickname.toString()
+//                    if (it.exists()) {
+//                        val nickname = it.child("nickname").value
+//                        LoginMessage.text = nickname.toString()
+//                    }
+                }
+
                 toLoginButton.isEnabled = false
                 toLoginButton.visibility = View.INVISIBLE
                 toLogoutButton.isEnabled = true
