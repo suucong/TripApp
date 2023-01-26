@@ -13,7 +13,7 @@
         android:id="@+id/ScrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="40dp"
+        android:paddingTop="20dp"
         android:scrollbarThumbVertical="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="36dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:text="이런 테마는 어때요"
+                android:text="이런 지역은 어때요"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -77,7 +77,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:background="@color/empty"
-                        android:src="@drawable/busan" />
+                        android:src="@drawable/img_busan02" />
 
                     <ImageButton
                         android:id="@+id/imageButton2"
@@ -85,7 +85,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_jeju" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -93,7 +94,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_gyeongju" />
 
                     <ImageButton
                         android:id="@+id/imageButton4"
@@ -101,7 +103,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_gapyeong" />
 
                     <ImageButton
                         android:id="@+id/imageButton5"
@@ -109,7 +112,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_andong" />
 
                     <ImageButton
                         android:id="@+id/imageButton6"
@@ -117,8 +121,19 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
+                        android:background="@color/empty"
+                        android:src="@drawable/img_jeonju" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_seoul" />
+
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -127,9 +142,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:text="이런 지역은 어때요"
+                android:text="이런 테마는 어때요"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -151,8 +166,7 @@
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:layout_marginTop="16dp" />
 
                     <ImageButton
                         android:id="@+id/imageButton_2"
@@ -202,7 +216,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard_bold"
                 android:text="금주 인기 여행 후기"
                 android:textColor="#000000"
@@ -222,7 +236,7 @@
 
                     <ImageButton
                         android:id="@+id/imageButton_1_"
-                        android:layout_width="300dp"
+                        android:layout_width="280dp"
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
@@ -230,7 +244,7 @@
 
                     <ImageButton
                         android:id="@+id/imageButton_2_"
-                        android:layout_width="300dp"
+                        android:layout_width="280dp"
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
@@ -255,7 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard_bold"
                 android:text="가장 많이 찾아본 여행 후기"
                 android:textColor="#000000"
@@ -275,7 +289,7 @@
 
                     <ImageButton
                         android:id="@+id/imageButton2_1"
-                        android:layout_width="300dp"
+                        android:layout_width="280dp"
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
@@ -283,7 +297,7 @@
 
                     <ImageButton
                         android:id="@+id/imageButton2_2"
-                        android:layout_width="300dp"
+                        android:layout_width="280dp"
                         android:layout_height="150dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
@@ -299,7 +313,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="65dp"
                 android:background="@drawable/button_white_hard_round"
                 android:fontFamily="@font/pretendard_regular"
                 android:text="전체보기 >" />
