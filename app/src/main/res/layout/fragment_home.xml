@@ -53,7 +53,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="36dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:text="이런 테마는 어때요"
+                android:text="이런 지역은 어때요"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -77,7 +77,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:background="@color/empty"
-                        android:src="@drawable/img_busan" />
+                        android:src="@drawable/img_busan02" />
 
                     <ImageButton
                         android:id="@+id/imageButton2"
@@ -85,7 +85,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_jeju" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
@@ -93,7 +94,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_gyeongju" />
 
                     <ImageButton
                         android:id="@+id/imageButton4"
@@ -101,7 +103,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_gapyeong" />
 
                     <ImageButton
                         android:id="@+id/imageButton5"
@@ -109,7 +112,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_andong" />
 
                     <ImageButton
                         android:id="@+id/imageButton6"
@@ -117,8 +121,19 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
+                        android:background="@color/empty"
+                        android:src="@drawable/img_jeonju" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_seoul" />
+
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -129,7 +144,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:text="이런 지역은 어때요"
+                android:text="이런 테마는 어때요"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -151,8 +166,7 @@
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:layout_marginTop="16dp" />
 
                     <ImageButton
                         android:id="@+id/imageButton_2"
