@@ -108,6 +108,7 @@
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
+                                android:backgroundTint="#00FFFFFF"
                                 android:text="📅" />
                         </LinearLayout>
 
@@ -144,6 +145,7 @@
                                 android:layout_width="51dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
+                                android:background="#FFFFFF"
                                 android:text="📅" />
                         </LinearLayout>
 

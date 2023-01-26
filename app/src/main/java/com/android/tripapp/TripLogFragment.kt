@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 
 class TripLogFragment : Fragment() {
     private lateinit var user: FirebaseAuth
@@ -28,17 +26,21 @@ class TripLogFragment : Fragment() {
     ): View? {
         user = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance("https://tripapp-8981e-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Users")
+
         val view = inflater.inflate(R.layout.fragment_trip_log, null)
         val LoginMessage_ = view.findViewById<TextView>(R.id.LoginMessage_)
         val AddTripLogButton = view.findViewById<ImageButton>(R.id.AddTripLogButton)
 
         if(user.currentUser != null) {
             user.currentUser?.let {
-//                val nickname_ = database.child("Users").child(it.uid).addValueEventListener(
-//                    ValueEventListener() {
-//
+//                val cUid = it.uid
+//                database.addValueEventListener(object: ValueEventListener {
+//                    override fun onDataChange(snapshot: DataSnapshot) {
 //                    }
-//                )
+//
+//                    override fun onCancelled(error: DatabaseError) {
+//                    }
+//                })
                 LoginMessage_.text = it.email
             }
         }

@@ -27,7 +27,7 @@
 
             <Button
                 android:id="@+id/btnAddPlan_Pn"
-                android:layout_width="379dp"
+                android:layout_width="348dp"
                 android:layout_height="71dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
