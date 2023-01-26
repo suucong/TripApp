@@ -166,7 +166,9 @@
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp" />
+                        android:layout_marginTop="16dp"
+                        android:background="@color/empty"
+                        android:src="@drawable/img_food_and_drink"/>
 
                     <ImageButton
                         android:id="@+id/imageButton_2"
@@ -174,7 +176,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_emotional" />
 
                     <ImageButton
                         android:id="@+id/imageButton_3"
@@ -182,7 +185,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_photozone" />
 
                     <ImageButton
                         android:id="@+id/imageButton_4"
@@ -190,7 +194,8 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_activity" />
 
                     <ImageButton
                         android:id="@+id/imageButton_5"
@@ -198,17 +203,21 @@
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="16dp"
-                        android:src="@color/gray" />
+                        android:background="@color/empty"
+                        android:src="@drawable/img_healing" />
 
                     <ImageButton
                         android:id="@+id/imageButton_6"
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
                         android:layout_marginRight="16dp"
-                        android:src="@color/gray" />
+                        android:layout_marginTop="16dp"
+                        android:background="@color/empty" />
+
+
                 </LinearLayout>
+
             </HorizontalScrollView>
 
             <TextView
